@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageViewChat"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/user"/>
+        <TextView
+            android:id="@+id/textViewNameChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khanh ngo"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/messageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/input_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text"
+            android:hint="Nhắn tin"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btn_Send"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/baseline_send_24"
+            android:layout_gravity="center_vertical"
+          />
+    </LinearLayout>
+
+</RelativeLayout>
